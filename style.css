@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+}
+
+:root {
+  --body-bg-color: #22212c;
+  --text-color: #837e9f;
+  --bg-cards: #302f3d;
+  --bg-techs: #cb92b1;
+
+  font-size: 62.5%; /* 10px */
+}
+
+body {
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+}
+
+h1 {
+  font: 700 2.3rem "Merriweather Sans", sans-serif;
+  line-height: 2.8rem;
+}
+
+h2 {
+  font: 700 2rem "Merriweather Sans", sans-serif;
+  line-height: 2.5rem;
+}
+
+p {
+  font: 400 1.3rem "Merriweather sans", sans-serif;
+  line-height: 1.6rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "A M";
+  margin: 4rem 4rem 4rem;
+  gap: 6rem;
+}
+
+aside {
+  grid-area: A;
+}
+
+.box {
+  background-color: var(--bg-cards);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.63);
+  border-radius: 2rem;
+
+  padding: 3rem;
+
+  margin-bottom: 3rem;
+}
+
+/* Header ================================================*/
+header {
+    display: none;
+}
+
+/* Profile ==========================================================*/
+.profile {
+  text-align: center;
+}
+
+.profile img {
+  border: 2px solid green;
+  width: 12.8rem;
+  height: 12.8rem;
+  border-radius: 50%;
+}
+
+.profile h1 {
+  margin: 3rem 0 1rem 0;
+}
+
+/* links ============================================================*/
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  color: var(--text-color);
+  font: 400 1.3rem "Merriweather Sans", sans-serif;
+  line-height: 1.63rem;
+  margin-bottom: 2rem;
+}
+
+.links a img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/* Tecnologies ======================================================*/
+.technologies h2 {
+  margin-bottom: 2rem;
+  margin-left: -1rem;
+}
+
+.technologies .language {
+  display: grid;
+  justify-content: space-between;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(40px, 1fr));
+  
+}
+
+.technologies .language p {
+  font: 700 1rem "Merriweather sans", sans-serif;
+  line-height: 1.25rem;
+  color: hsla(0, 0%, 0%, 1);
+  padding: 10px 20px;
+  background-color: var(--bg-techs);
+  border-radius: 3rem;
+  text-align: center;
+  
+  
+}
+
+/* Experiences ======================================================*/
+.experiences h2 {
+  margin-left: -1rem;
+  margin-bottom: 2rem;
+}
+
+.experiences ul {
+  margin-left: 3rem;
+}
+
+.experiences ul li {
+  font: 700 1.4rem "Merriweather sans", sans-serif;
+  line-height: 1.75rem;
+}
+
+.experiences ul p {
+  font-size: x-small;
+  margin-bottom: 2rem;
+}
+
+.experiences ul p:last-child {
+  margin: 0;
+}
+
+.experiences ul span {
+  font: 500 1.2rem "Merriweather sans", sans-serif;
+  line-height: 1.5rem;
+}
+
+/* Education ========================================================*/
+.education h2 {
+  margin-left: -1rem;
+  margin-bottom: 2rem;
+}
+
+.education ul {
+  margin-left: 3rem;
+}
+
+.education ul li {
+  font: 700 1.4rem "Merriweather sans", sans-serif;
+  line-height: 1.75rem;
+}
+
+.education ul p {
+  font-size: x-small;
+  margin-bottom: 2rem;
+}
+
+.education ul p:last-child {
+  margin: 0;
+}
+
+.education ul span {
+  font: 500 1.2rem "Merriweather sans", sans-serif;
+  line-height: 1.5rem;
+}
+
+/* My Projects ======================================================*/
+.my-projects {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.my-projects button {
+  border: none;
+  background: none;
+  color: var(--text-color);
+
+  font: 400 1.4rem "Merriweather sans", sans-serif;
+  line-height: 1.76rem;
+
+  cursor: pointer;
+}
+
+.cards {
+  display: flex;
+  gap: 3rem;
+  
+}
+
+.card h3 {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font: 700 1.6rem "Merriweather sans", sans-serif;
+  line-height: 2.11rem;
+}
+
+.card > p:nth-child(2) {
+  margin-block: 2rem;
+}
+
+.card div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.card div p {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Card Recent ======================================================*/
+.card-recent {
+  display: flex;
+  gap: 2rem;
+}
+
+.card-recent figure img {
+  width: 12.8rem;
+  height: 12.8rem;
+  border-radius: 50%;
+}
+
+.card-recent h2 {
+  font: 700 1.8rem "Merriweather sans", sans-serif;
+  line-height: 2.26rem;
+}
+
+.card-recent div h2 + p {
+  margin-block: 1rem 2.8rem;
+}
+
+.card-recent h3 {
+  font: 400 1.6rem "Merriweather sans", sans-serif;
+  line-height: 2.01rem;
+  margin-bottom: 1.1rem;
+}
+
+.card-recent .hashtag {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* footer =========================================================*/
+footer {
+  text-align: center;
+  margin-block: -5rem 2rem;
+
+  font: 400 1.4rem "Merriweather Sans", sans-serif;
+
+  line-height: 2rem;
+}
+
+/* Resposividade ===================================================*/
+
+@media (max-width: 960px) {
+    aside{
+        order: 0;
+        margin-top: 8rem;
+    }
+
+    /* #Tecnologies .language{
+      grid-template-columns: repeat(3, minmax(80px, 1fr));
+    } */
+
+    #educator {
+      margin-bottom: 0;
+    }
+
+    .cards{
+      flex-wrap: wrap;
+    }
+
+    .cards .card:first-child {
+      margin-bottom: 0;
+    }
+
+    .card {
+      width: 100%;
+    }
+    main {
+      order: 1;
+    }
+
+    .card-recent {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hashtag {
+      flex-wrap: wrap;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header.container-header {
+        display:flex;
+        position: fixed;
+        background-color: var(--bg-cards);
+        
+        align-items: center;
+        width: 100%;
+        height: 8rem;
+        padding-inline: 4rem;
+        top: 0;
+        left: 0;
+        
+    }
+
+    .container-header strong {
+      font: 700 2rem "Merriweather", sans-serif;
+      margin: auto;
+    }
+
+    .close {
+      display: none;
+    }
+
+    .modal .close{
+      display: flex;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+
+    .modal .open {
+      display: none;
+    }
+
+    .header {
+      display: none;
+    }
+
+    .header.modal{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem
+    }
+
+    .header.modal a{
+      color: var(--text-color);
+      font:700 2rem 'Merriweather', sans-serif;
+    }
+
+    .modal {
+      height: 100vh;
+      width: 50%;
+      background-color: var(--bg-cards);
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin-top: rem;
+      
+    }
+
+}
